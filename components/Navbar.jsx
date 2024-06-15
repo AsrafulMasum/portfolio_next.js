@@ -30,11 +30,13 @@ function Navbar() {
     <div className="relative text-white">
       <div className="fixed w-full bg-black bg-opacity-70 backdrop-blur-md py-2">
         <nav className="max-w-screen-xl mx-4 xl:mx-auto flex justify-between items-center">
-          <Image src={logo} alt="Logo" width={40} height={40} />
           <div className="flex justify-center items-center gap-8">
+            <Image src={logo} alt="Logo" width={40} height={40} />
             <ul className="hidden md:flex justify-center items-center gap-4">
               {navLinks}
             </ul>
+          </div>
+          <div className="flex justify-center items-center gap-4">
             <div className="flex gap-4">
               <a
                 target="_blank"
