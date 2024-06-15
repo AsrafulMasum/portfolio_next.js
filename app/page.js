@@ -1,10 +1,10 @@
-import Button from "@/components/Button";
-import Image from "next/image";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main>
-      <Button text="Download Resume"/>
+    <main className="overflow-hidden">
+      <Navbar />
+      <div className="h-[1000px] bg-white">hello world</div>
     </main>
   );
 }

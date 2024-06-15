@@ -4,7 +4,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 function Button({ text }) {
   return (
     <button
-      className={`flex justify-center items-center gap-4 bg-btn_color text-white rounded-full p-4 group overflow-hidden`}
+      className={`flex justify-center items-center gap-2 bg-btn_color text-white rounded-full p-4 group overflow-hidden`}
     >
       {text}
       <span className="relative bg-primary w-6 h-6 rounded-full overflow-hidden">
