@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         primary: '#F96302',
         btn_color: '#4D1F01',
+        dark_black: '#0D0A08',
       }
     },
   },

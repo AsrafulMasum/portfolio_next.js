@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import logo from "./../public/logo.png";
 import { IoIosClose, IoIosMenu } from "react-icons/io";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import Sidebar from "./Sidebar";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -28,16 +29,16 @@ function Navbar() {
 
   return (
     <div className="relative text-white">
-      <div className="fixed w-full bg-black bg-opacity-70 backdrop-blur-md py-2">
-        <nav className="max-w-screen-xl mx-4 xl:mx-auto flex justify-between items-center">
+      <div className="fixed w-full bg-dark_black py-4">
+        <nav className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto flex justify-between items-center">
           <div className="flex justify-center items-center gap-8">
             <Image src={logo} alt="Logo" width={40} height={40} />
-            <ul className="hidden md:flex justify-center items-center gap-4">
+            <ul className="hidden md:flex justify-center items-center gap-8">
               {navLinks}
             </ul>
           </div>
           <div className="flex justify-center items-center gap-4">
-            <div className="flex gap-4">
+            <div className="flex gap-6 text-2xl">
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -61,23 +62,21 @@ function Navbar() {
               </a>
             </div>
             <div className="md:hidden" onClick={() => setOpen((prev) => !prev)}>
-              {open ? (
-                <IoIosClose className="text-3xl cursor-pointer" />
-              ) : (
-                <IoIosMenu className="text-2xl cursor-pointer" />
-              )}
+              {!open &&
+                <IoIosMenu className="text-3xl cursor-pointer" />
+              }
             </div>
           </div>
         </nav>
       </div>
       <aside
-        className={`md:hidden absolute top-[52px] bg-[#999] w-60 p-8 rounded-l-lg duration-500 ${
-          open ? "right-0" : "-right-60"
-        }`}
+        className={`md:hidden absolute top-0 bg-dark_black w-screen h-screen py-6 duration-500 ${open ? "right-0" : "-right-[1000px]"
+          }`}
       >
-        <ul className="flex-col justify-center items-center space-y-4">
-          {navLinks}
-        </ul>
+        <div onClick={() => setOpen((prev) => !prev)} className="flex justify-end mb-4 mr-4">
+          <IoIosClose className="text-3xl cursor-pointer" />
+        </div>
+        <Sidebar />
       </aside>
     </div>
   );
