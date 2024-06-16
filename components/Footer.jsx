@@ -28,7 +28,7 @@ function Footer() {
       <div className='max-w-screen-xl mx-4 md:mx-10 xl:mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-0'>
         <div className='md:w-1/2 space-y-4'>
           <Image src={logo} alt='Logo' />
-          <div className='space-y-8'>
+          <div className='space-y-8 text-white'>
             <p>
               As a MERN stack developer, I specialize in building robust web applications with MongoDB, Express.js, React.js, and Node.js technologies.
             </p>
@@ -37,14 +37,14 @@ function Footer() {
         </div>
 
         <div className='md:w-1/4'>
-          <p className='text-2xl'>Quick Links</p>
+          <p className='text-2xl text-white'>Quick Links</p>
           <ul className="flex md:flex-col gap-4 mt-4 text-primary">
             {navLinks}
           </ul>
         </div>
 
         <div>
-          <p className='text-2xl'>Follow Me</p>
+          <p className='text-2xl text-white'>Follow Me</p>
           <div className="flex gap-6 text-2xl mt-4">
             <a
               target="_blank"
