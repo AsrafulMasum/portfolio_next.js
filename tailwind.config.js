@@ -12,6 +12,7 @@ module.exports = {
         btn_color: '#4D1F01',
         dark_black: '#0D0A08',
         text_color: '#999999',
+        card_bg: '#F5F5F5',
       }
     },
   },

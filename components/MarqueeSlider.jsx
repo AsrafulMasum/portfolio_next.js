@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 function MarqueeSlider() {
   return (
-    <div className='text-4xl font-bold text-text_color bg-white py-8'>
+    <div className='text-4xl font-bold text-text_color bg-white py-8 border-b'>
       <Marquee speed={100}>
         <div className='space-x-28 flex'>
         <p>Web Development</p>
