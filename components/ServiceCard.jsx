@@ -1,8 +1,8 @@
-"use client"
-import React, { useState } from 'react'
-import Button from './Button';
-import Image from 'next/image';
-import stroke from "./../public/stroke.png"
+"use client";
+import React, { useState } from "react";
+import Button from "./Button";
+import Image from "next/image";
+import stroke from "./../public/stroke.png";
 
 function ServiceCard({ text, desc }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -20,54 +20,71 @@ function ServiceCard({ text, desc }) {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
       style={{
-        transition: 'background-color 0.5s ease',
+        transition: "background-color 0.5s ease",
       }}
-      className='bg-card_bg py-24 px-16 xl:w-1/3 relative overflow-hidden'>
-      <h2 className='text-5xl font-semibold text-primary mb-10'>{text}</h2>
-      <p className='text-dark_black font-semibold mb-20'>
-        {desc}
-      </p>
-      <Button text="View Projects" styles="bg-btn_color text-white" spanStyle="bg-primary text-white" />
-      <div className='absolute bottom-0 -right-5'>
-        <Image className='w-32' src={stroke} alt='Stroke' style={{
-          transition: 'transform 0.3s',
-          transform: isHovered ? 'rotate(25deg)' : 'rotate(0deg)'
-        }} />
+      className="bg-card_bg xl:w-1/3 relative overflow-hidden"
+    >
+      <div style={{ zIndex: 2 }} className="h-full w-full relative py-24 px-16">
+        <h2 className={`text-5xl font-semibold mb-10 ${isHovered ? "text-white" : "text-primary"}`}>{text}</h2>
+        <p className="text-dark_black font-semibold mb-20">{desc}</p>
+        <Button
+          text="View Projects"
+          styles="bg-btn_color text-white"
+          spanStyle="bg-primary text-white"
+        />
+        <div className="absolute bottom-0 -right-5">
+          <Image
+            className="w-32"
+            src={stroke}
+            alt="Stroke"
+            style={{
+              transition: "transform 0.3s",
+              transform: isHovered ? "rotate(28deg)" : "rotate(0deg)",
+            }}
+          />
+        </div>
       </div>
       <div
-        className="hover-animation"
+        className={`overlay ${isHovered ? "slide-in" : "slide-out"}`}
         style={{
-          position: 'absolute',
+          position: "absolute",
           top: 0,
-          left: isHovered ? '0%' : '100%', // Start position based on hover state
-          width: '100%',
-          height: '100%',
-          backgroundColor: '#FFFFFF', // Initial color when transitioning
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "#F96302",
           zIndex: 1,
-          animation: isHovered ? 'slide-in 0.5s forwards' : 'slide-out 0.5s forwards', // Apply animation based on hover state
         }}
       />
       <style jsx>{`
         @keyframes slide-in {
           0% {
-            left: 100%; /* Start from right */
+            transform: translateX(100%);
           }
           100% {
-            left: 0%; /* Move to left */
+            transform: translateX(0%);
           }
         }
 
         @keyframes slide-out {
           0% {
-            right: 0%; /* Start from left */
+            transform: translateX(0%);
           }
           100% {
-            right: 100%; /* Move to right */
+            transform: translateX(-100%);
           }
+        }
+
+        .slide-in {
+          animation: slide-in 0.5s forwards;
+        }
+
+        .slide-out {
+          animation: slide-out 0.5s forwards;
         }
       `}</style>
     </div>
-  )
+  );
 }
 
-export default ServiceCard
+export default ServiceCard;
