@@ -22,7 +22,7 @@ function ServiceCard({ text, desc }) {
       style={{
         transition: "background-color 0.5s ease",
       }}
-      className="bg-card_bg xl:w-1/3 relative overflow-hidden"
+      className="bg-card_bg relative overflow-hidden"
     >
       <div style={{ zIndex: 2 }} className="h-full w-full relative py-24 px-16">
         <h2 className={`text-5xl font-semibold mb-10 ${isHovered ? "text-white" : "text-primary"}`}>{text}</h2>
@@ -38,8 +38,8 @@ function ServiceCard({ text, desc }) {
             src={stroke}
             alt="Stroke"
             style={{
-              transition: "transform 0.3s",
-              transform: isHovered ? "rotate(28deg)" : "rotate(0deg)",
+              transition: "transform 0.5s",
+              transform: isHovered ? "rotate(29deg)" : "rotate(0deg)",
             }}
           />
         </div>
