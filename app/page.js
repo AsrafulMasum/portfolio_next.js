@@ -1,3 +1,4 @@
+import DevInfo from "@/components/DevInfo";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import MarqueeSlider from "@/components/MarqueeSlider";
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <MarqueeSlider />
+      <DevInfo />
       <Services />
       <Footer />
     </main>

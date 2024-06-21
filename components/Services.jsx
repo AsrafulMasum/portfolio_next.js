@@ -17,7 +17,7 @@ function Services() {
             <ServiceCard text="Front-end Development" desc="Frontend developer specializing in HTML, CSS, and JavaScript frameworks. Committed to creating intuitive, responsive and user friendly interfaces that elevate user engagement and deliver seamless digital experiences." />
           </div>
           <div className='lg:w-1/2 xl:w-1/3 lg:flex-1 xl:flex-none'>
-            <ServiceCard text="Back-end Development" desc="Experienced backend developer proficient in building robust APIs, databases, and server-side logic. Dedicated to optimizing performance and ensuring scalable solutions for seamless application functionality." />
+            <ServiceCard text="Back-end Development" desc="Experienced backend developer proficient in building robust APIs, databases, and server-side logic. Dedicated to optimizing performance and ensuring scalable and efficient solutions for seamless application functionality." />
           </div>
         </div>
       </div>
