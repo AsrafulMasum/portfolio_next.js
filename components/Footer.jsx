@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Button from './Button'
 import Link from 'next/link';
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
+import ShowReel from './ShowReel';
 
 function Footer() {
   const navLinks = (
@@ -32,6 +33,11 @@ function Footer() {
             <p>
               As a MERN stack developer, I specialize in building robust web applications with MongoDB, Express.js, React.js, and Node.js technologies.
             </p>
+            <div>
+              <p className='text-lg'>Mohammad Asraful Islam Masum</p>
+              <p>h.m.asrafulmasum@gmail.com</p>
+              <p>+880 1687 177481</p>
+            </div>
             <Button text="Contact Me" styles="bg-btn_color text-white" spanStyle="bg-primary text-white" />
           </div>
         </div>
@@ -68,8 +74,11 @@ function Footer() {
               <FaGithub className='text-primary' />
             </a>
           </div>
+          <ShowReel />
         </div>
       </div>
+      <hr className='max-w-screen-xl mx-4 md:mx-10 xl:mx-auto my-8' />
+      <p className='max-w-screen-xl mx-4 md:mx-10 xl:mx-auto text-white font-medium text-center'>All Rights Reserved by @ Mohammad Asraful Islam Masum.</p>
     </div>
   )
 }

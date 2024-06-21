@@ -21,10 +21,11 @@ function ServiceCard({ text, desc }) {
       onMouseOut={handleMouseOut}
       style={{
         transition: "background-color 0.5s ease",
+        position:"relative" 
       }}
-      className="bg-card_bg relative overflow-hidden"
+      className="overflow-hidden"
     >
-      <div style={{ zIndex: 2 }} className="h-full w-full relative py-24 px-16">
+      <div style={{ zIndex: 2 }} className="h-full w-full relative py-16 px-8 md:py-24 md:px-16 ">
         <h2 className={`text-5xl font-semibold mb-10 ${isHovered ? "text-white" : "text-primary"}`}>{text}</h2>
         <p className="text-dark_black font-semibold mb-20">{desc}</p>
         <Button
@@ -49,7 +50,7 @@ function ServiceCard({ text, desc }) {
         style={{
           position: "absolute",
           top: 0,
-          left: 0,
+          left: -1,
           width: "100%",
           height: "100%",
           backgroundColor: "#F96302",
