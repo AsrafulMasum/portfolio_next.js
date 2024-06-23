@@ -70,7 +70,7 @@ function Navbar() {
         </nav>
       </div>
       <aside
-        className={`md:hidden absolute top-0 bg-dark_black w-screen h-screen py-6 duration-500 ${open ? "right-0" : "-right-[1000px]"
+        className={`md:hidden fixed top-0 bg-dark_black w-screen h-screen py-6 duration-500 ${open ? "right-0" : "-right-[1000px]"
           }`}
       >
         <div onClick={() => setOpen((prev) => !prev)} className="flex justify-end mb-4 mr-4">
