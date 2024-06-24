@@ -41,8 +41,8 @@ function DevInfo() {
         </div>
         <div className="mt-10 flex items-center">
           <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-5"><span className="text-4xl text-primary">5+</span> <br /> website Development</div>
-          <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-5"><span className="text-4xl text-primary">5+</span> <br /> website Development</div>
-          <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-5"><span className="text-4xl text-primary">5+</span> <br /> website Development</div>
+          <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-5"><span className="text-4xl text-primary">10+</span> <br /> frontend Development</div>
+          <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-5"><span className="text-4xl text-primary">5+</span> <br /> Api Development</div>
         </div>
         <Image className="w-40 absolute right-0 bottom-16" src={stroke} alt="" />
       </div>
