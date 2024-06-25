@@ -1,4 +1,4 @@
-import Button from "@/components/Button";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import React from "react";
@@ -7,7 +7,7 @@ function page() {
   return (
     <main className="overflow-hidden bg-white">
       <Navbar />
-      <div className="mt-24 max-w-screen-xl mx-4 md:mx-10 xl:mx-auto lg:h-screen flex flex-col md:flex-row">
+      <div className="mt-20 lg:mt-0 max-w-screen-xl mx-4 md:mx-10 xl:mx-auto lg:h-screen flex flex-col md:flex-row md:items-center">
         <div className="flex flex-col gap-12 text-dark_black font-medium flex-1">
           <h2 className="text-7xl font-semibold text-text_color">
             Let’s <span className="text-primary">work</span> <br /> together
@@ -24,34 +24,7 @@ function page() {
         </div>
 
         <div className="flex-1">
-          <form className="lg:w-3/4 mx-auto my-20">
-            <input
-              className="w-full h-11 outline-none px-5 bg-white border border-primary rounded text-dark_black placeholder:text-dark_black"
-              type="text"
-              placeholder="Name"
-              required
-            />
-
-            <input
-              className="w-full h-11 outline-none px-5 mt-4 bg-white border border-primary rounded text-dark_black placeholder:text-dark_black"
-              type="text"
-              placeholder="Email"
-              required
-            />
-
-            <textarea
-              className="w-full h-40 outline-none px-5 mt-4 bg-white border border-primary rounded pt-[9px] text-dark_black placeholder:text-dark_black"
-              placeholder="Message"
-              required
-            />
-            <div className="mt-4">
-              <Button
-                text="Contact Me"
-                styles="bg-transparent text-dark_black border border-primary"
-                spanStyle="bg-primary text-white"
-              />
-            </div>
-          </form>
+          <ContactForm />
         </div>
       </div>
       <Footer />
