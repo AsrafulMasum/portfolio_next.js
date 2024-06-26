@@ -1,5 +1,4 @@
 import React from "react";
-import ShowReel from "./ShowReel";
 import Button from "./Button";
 import Image from "next/image";
 import profile from "./../public/profile.png";
@@ -25,11 +24,14 @@ function Hero() {
             </p>
           </div>
           <div className="flex flex-col lg:flex-row justify-start lg:items-center gap-4">
-            <Button
-              text="Download Resume"
-              styles="bg-btn_color text-white"
-              spanStyle="bg-primary text-white"
-            />
+            <a href="/resume.pdf" download="Resume">
+              <Button
+                text="Download Resume"
+                styles="bg-btn_color text-white"
+                spanStyle="bg-primary text-white"
+              />
+            </a>
+
             <Link href="/contact">
               <Button
                 text="Contact Me"
