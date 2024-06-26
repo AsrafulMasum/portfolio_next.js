@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import MarqueeSlider from "@/components/MarqueeSlider";
 import Navbar from "@/components/Navbar";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Services from "@/components/Services";
-import ShowReel from "@/components/ShowReel";
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
       <DevInfo />
       <Services />
       <Footer />
+      <ScrollToTopButton />
     </main>
   );
 }

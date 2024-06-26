@@ -1,6 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import React from "react";
 
 function page() {
@@ -28,6 +29,7 @@ function page() {
         </div>
       </div>
       <Footer />
+      <ScrollToTopButton />
     </main>
   );
 }
