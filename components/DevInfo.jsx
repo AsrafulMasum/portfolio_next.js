@@ -3,6 +3,7 @@ import React from "react";
 import coding from "./../public/coding.jpg";
 import stroke from "./../public/dev_stroke.png";
 import Button from "./Button";
+import Link from "next/link";
 
 function DevInfo() {
   return (
@@ -33,18 +34,33 @@ function DevInfo() {
             to reach a wider audience. Partner with me to achieve your business
             goals and stand out in the digital landscape.
           </p>
-          <Button
-            text="Contact Me"
-            styles="bg-transparent text-dark_black border border-primary"
-            spanStyle="bg-primary text-white"
-          />
+          <Link href="/contact">
+            <Button
+              text="Contact Me"
+              styles="bg-transparent text-dark_black border border-primary"
+              spanStyle="bg-primary text-white"
+            />
+          </Link>
         </div>
         <div className="mt-10 flex items-center">
-          <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-5"><span className="text-4xl text-primary">5+</span> <br /> website Development</div>
-          <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-5"><span className="text-4xl text-primary">10+</span> <br /> frontend Development</div>
-          <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-5"><span className="text-4xl text-primary">5+</span> <br /> Api Development</div>
+          <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-5">
+            <span className="text-4xl text-primary">5+</span> <br /> website
+            Development
+          </div>
+          <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-5">
+            <span className="text-4xl text-primary">10+</span> <br /> frontend
+            Development
+          </div>
+          <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-5">
+            <span className="text-4xl text-primary">5+</span> <br /> Api
+            Development
+          </div>
         </div>
-        <Image className="w-40 absolute right-0 bottom-16" src={stroke} alt="" />
+        <Image
+          className="w-40 absolute right-0 bottom-16"
+          src={stroke}
+          alt=""
+        />
       </div>
     </div>
   );

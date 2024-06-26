@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Button from "./Button";
 import Image from "next/image";
 import stroke from "./../public/stroke.png";
+import Link from "next/link";
 
 function ServiceCard({ text, desc }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -21,18 +22,29 @@ function ServiceCard({ text, desc }) {
       onMouseOut={handleMouseOut}
       style={{
         transition: "background-color 0.5s ease",
-        position:"relative" 
+        position: "relative",
       }}
       className="overflow-hidden"
     >
-      <div style={{ zIndex: 2 }} className="h-full w-full relative py-16 px-8 md:py-24 md:px-16 ">
-        <h2 className={`text-5xl font-semibold mb-10 ${isHovered ? "text-white" : "text-primary"}`}>{text}</h2>
+      <div
+        style={{ zIndex: 2 }}
+        className="h-full w-full relative py-16 px-8 md:py-24 md:px-16 "
+      >
+        <h2
+          className={`text-5xl font-semibold mb-10 ${
+            isHovered ? "text-white" : "text-primary"
+          }`}
+        >
+          {text}
+        </h2>
         <p className="text-dark_black font-semibold mb-20">{desc}</p>
-        <Button
-          text="View Projects"
-          styles="bg-btn_color text-white"
-          spanStyle="bg-primary text-white"
-        />
+        <Link href="/projects">
+          <Button
+            text="View Projects"
+            styles="bg-btn_color text-white"
+            spanStyle="bg-primary text-white"
+          />
+        </Link>
         <div className="absolute bottom-0 -right-5">
           <Image
             className="w-32"

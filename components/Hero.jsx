@@ -3,6 +3,7 @@ import ShowReel from "./ShowReel";
 import Button from "./Button";
 import Image from "next/image";
 import profile from "./../public/profile.png";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -29,11 +30,13 @@ function Hero() {
               styles="bg-btn_color text-white"
               spanStyle="bg-primary text-white"
             />
-            <Button
-              text="Contact Me"
-              styles="bg-transparent text-white border"
-              spanStyle="bg-white text-primary"
-            />
+            <Link href="/contact">
+              <Button
+                text="Contact Me"
+                styles="bg-transparent text-white border"
+                spanStyle="bg-white text-primary"
+              />
+            </Link>
           </div>
         </div>
         {/* <div className='w-1/2 hidden xl:block'>
