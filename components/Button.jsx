@@ -1,16 +1,19 @@
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { ImSpinner9 } from "react-icons/im";
 
-function Button({ text, styles, spanStyle }) {
+function Button({ text, styles, spanStyle, isLoading }) {
   return (
     <button
       className={`flex justify-center items-center gap-4 text-xl rounded-full p-4 group overflow-hidden ${styles} uppercase`}
     >
-      {text}
-      <span className={`relative w-6 h-6 rounded-full overflow-hidden ${spanStyle}`}>
+      {isLoading ? <ImSpinner9 className="animate-spin text-primary mx-20" /> : text}
+      {!isLoading && <span
+        className={`relative w-6 h-6 rounded-full overflow-hidden ${spanStyle}`}
+      >
         <IoIosArrowRoundForward className="absolute text-2xl group-hover:translate-x-10 duration-500" />
         <IoIosArrowRoundForward className="absolute -left-10 text-2xl group-hover:translate-x-0 group-hover:left-0 duration-500" />
-      </span>
+      </span>}
     </button>
   );
 }

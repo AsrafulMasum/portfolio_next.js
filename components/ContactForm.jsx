@@ -7,17 +7,13 @@ function ContactForm() {
   const formRef = useRef();
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     setError(false);
     setSuccess(false);
-
-    const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
-    };
 
     emailjs
       .sendForm(
@@ -29,16 +25,23 @@ function ContactForm() {
       .then(
         () => {
           setSuccess(true);
-          // e.target.reset();
+          e.target.reset();
+          setLoading(false);
         },
-        () => {
+        (error) => {
           setError(true);
+          setLoading(false);
+          console.log(error);
         }
       );
   };
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} className="lg:w-3/4 mx-auto my-20">
+    <form
+      ref={formRef}
+      onSubmit={handleSubmit}
+      className="lg:w-3/4 mx-auto my-20"
+    >
       <input
         className="w-full h-11 outline-none px-5 bg-white border border-primary rounded text-dark_black placeholder:text-dark_black"
         type="text"
@@ -63,7 +66,8 @@ function ContactForm() {
       />
       <div className="mt-4">
         <Button
-          text="Contact Me"
+          isLoading={loading}
+          text="Send Message"
           styles="bg-transparent text-dark_black border border-primary"
           spanStyle="bg-primary text-white"
         />
