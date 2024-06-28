@@ -48,23 +48,23 @@ function Navbar() {
                 <FaFacebook />
               </a>
               <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.facebook.com/asrafulislam.masum.3"
-              >
-                <FaXTwitter />
-              </a>
+              target="_blank"
+              rel="noreferrer"
+              href="https://x.com/MasumKa24921110"
+            >
+              <FaXTwitter />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/hossainmohammadislam"
+            >
+              <FaInstagram />
+            </a>
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.facebook.com/asrafulislam.masum.3"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.linkedin.com/in/hossain-mohammad-asraful-islam-masum-4b5847200"
+                href="https://www.linkedin.com/in/mohammad-asraful-islam-masum-4b5847200"
               >
                 <FaLinkedin />
               </a>

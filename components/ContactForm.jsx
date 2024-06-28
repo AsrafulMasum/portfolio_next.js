@@ -42,25 +42,34 @@ function ContactForm() {
       onSubmit={handleSubmit}
       className="lg:w-3/4 mx-auto my-20"
     >
+      <level className="text-[#141414] text-xl font-medium">
+        Full Name
+      </level>
       <input
-        className="w-full h-11 outline-none px-5 bg-white border border-primary rounded text-dark_black placeholder:text-dark_black"
+        className="w-full h-11 mt-5 mb-10 outline-none bg-white border-b-2 border-[#141414] border-opacity-60 text-[#141414] text-opacity-60 font-medium text-lg placeholder:text-[#141414] placeholder:text-opacity-60 placeholder:font-medium placeholder:text-lg"
         type="text"
-        placeholder="Name"
+        placeholder="Mohammad Asraful Islam Masum"
         required
         name="name"
       />
 
+      <level className="text-[#141414] text-xl font-medium">
+        Email
+      </level>
       <input
-        className="w-full h-11 outline-none px-5 mt-4 bg-white border border-primary rounded text-dark_black placeholder:text-dark_black"
+        className="w-full h-11 mt-5 mb-10 outline-none bg-white border-b-2 border-[#141414] border-opacity-60 text-[#141414] text-opacity-60 font-medium text-lg placeholder:text-[#141414] placeholder:text-opacity-60 placeholder:font-medium placeholder:text-lg"
         type="email"
-        placeholder="Email"
+        placeholder="h.m.asrafulmasum@gmail.com"
         required
         name="email"
       />
 
+      <level className="text-[#141414] text-xl font-medium">
+        Message
+      </level>
       <textarea
-        className="w-full h-40 outline-none px-5 mt-4 bg-white border border-primary rounded pt-[9px] text-dark_black placeholder:text-dark_black"
-        placeholder="Message"
+        className="w-full h-11 mt-5 mb-10 outline-none bg-white border-b-2 border-[#141414] border-opacity-60 text-[#141414] text-opacity-60 font-medium text-lg placeholder:text-[#141414] placeholder:text-opacity-60 placeholder:font-medium placeholder:text-lg"
+        placeholder="Tell us more about your idea"
         required
         name="message"
       />
