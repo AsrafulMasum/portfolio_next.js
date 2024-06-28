@@ -4,7 +4,8 @@ import Link from "next/link";
 import React, { useState } from "react";
 import logo from "./../public/logo.png";
 import { IoIosClose, IoIosMenu } from "react-icons/io";
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Sidebar from "./Sidebar";
 
 function Navbar() {
@@ -45,6 +46,20 @@ function Navbar() {
                 href="https://www.facebook.com/asrafulislam.masum.3"
               >
                 <FaFacebook />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.facebook.com/asrafulislam.masum.3"
+              >
+                <FaXTwitter />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.facebook.com/asrafulislam.masum.3"
+              >
+                <FaInstagram />
               </a>
               <a
                 target="_blank"

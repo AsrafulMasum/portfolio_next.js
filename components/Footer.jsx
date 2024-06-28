@@ -26,7 +26,7 @@ function Footer() {
   );
 
   return (
-    <div className="bg-dark_black pt-16 pb-8">
+    <div className="bg-dark_black pt-28 pb-8">
       <div className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-0">
         <div className="md:w-1/3 lg:w-1/2">
           <Image src={logo} alt="Logo" />

@@ -47,9 +47,9 @@ function ServiceCard({ text, desc }) {
             spanStyle="bg-primary text-white"
           />
         </Link>
-        <div className="absolute bottom-0 -right-5">
+        <div className="absolute bottom-0 -right-5 xl:-right-12">
           <Image
-            className="w-32"
+            className="w-32 xl:w-56"
             src={stroke}
             alt="Stroke"
             style={{
