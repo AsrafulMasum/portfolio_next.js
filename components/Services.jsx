@@ -4,11 +4,11 @@ import ServiceCard from './ServiceCard'
 function Services() {
   return (
     <div className='bg-white'>
-      <div className='py-10 text-center'>
-        <h4 className='text-text_color text-4xl lg:text-7xl font-semibold capitalize'>i can provide you</h4>
-        <h2 className='text-primary text-5xl lg:text-8xl font-bold italic capitalize mt-4'>the best solutions.</h2>
+      <div className='py-28 text-center'>
+        <h4 className='text-text_color text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-semibold capitalize'>i can provide you</h4>
+        <h2 className='text-primary text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold italic capitalize mt-4'>the best solutions.</h2>
       </div>
-      <div className='bg-card_bg'>
+      <div className='bg-card_bg hover:bg-none'>
         <div className='flex flex-col lg:flex-row lg:flex-wrap justify-center'>
           <div className='lg:w-1/2 xl:w-1/3 '>
             <ServiceCard text="Website Development" desc="Experienced web developer proficient in frontend and backend technologies. Dedicated to creating responsive, user-friendly websites with optimal performance and seamless functionality across devices and platforms." />

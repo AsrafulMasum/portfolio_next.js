@@ -3,7 +3,8 @@ import logo from "./../public/logoPrimary.png";
 import Image from "next/image";
 import Button from "./Button";
 import Link from "next/link";
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import ShowReel from "./ShowReel";
 
 function Footer() {
@@ -27,9 +28,9 @@ function Footer() {
   return (
     <div className="bg-dark_black pt-16 pb-8">
       <div className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-0">
-        <div className="md:w-1/2 space-y-4">
+        <div className="md:w-1/3 lg:w-1/2">
           <Image src={logo} alt="Logo" />
-          <div className="space-y-8 text-white">
+          <div className="mt-10 space-y-8 text-white">
             <p>
               As a MERN stack developer, I specialize in building robust web
               applications with MongoDB, Express.js, React.js, and Node.js
@@ -40,7 +41,7 @@ function Footer() {
               <p>h.m.asrafulmasum@gmail.com</p>
               <p>+880 1687 177481</p>
             </div>
-            <div>
+            <div className="inline-block">
               <Link href="/contact">
                 <Button
                   text="Contact Me"
@@ -52,7 +53,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="md:w-1/4">
+        <div className="md:w-1/5">
           <p className="text-2xl text-white">Quick Links</p>
           <ul className="flex md:flex-col gap-4 mt-4 text-primary">
             {navLinks}
@@ -72,6 +73,20 @@ function Footer() {
             <a
               target="_blank"
               rel="noreferrer"
+              href="https://www.facebook.com/asrafulislam.masum.3"
+            >
+              <FaXTwitter className="text-primary" />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.facebook.com/asrafulislam.masum.3"
+            >
+              <FaInstagram className="text-primary" />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/hossain-mohammad-asraful-islam-masum-4b5847200"
             >
               <FaLinkedin className="text-primary" />
@@ -84,7 +99,7 @@ function Footer() {
               <FaGithub className="text-primary" />
             </a>
           </div>
-          <ShowReel />
+          <div className="-ml-8"><ShowReel /></div>
         </div>
       </div>
       <hr className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto my-8" />

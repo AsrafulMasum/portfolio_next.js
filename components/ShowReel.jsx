@@ -7,7 +7,7 @@ import innerReel from "./../public/innerReel.png"
 
 function ShowReel() {
   return (
-    <div className='hidden lg:block w-72 h-72 mt-8'>
+    <div className='hidden md:block w-72 h-72 mt-8'>
       <div className='relative'>
         <Image className='absolute top-0 w-72' src={reel} alt='' />
         <Image className='absolute top-9 left-11 w-52 z-10' style={{ animation: 'spin-clockwise 5s linear infinite' }} src={reelText} alt='' />

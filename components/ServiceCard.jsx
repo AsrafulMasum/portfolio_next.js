@@ -28,17 +28,19 @@ function ServiceCard({ text, desc }) {
     >
       <div
         style={{ zIndex: 2 }}
-        className="h-full w-full relative py-16 px-8 md:py-24 md:px-16 "
+        className="h-full w-full relative py-16 xl:py-48 px-8 md:py-24 md:px-16 "
       >
         <h2
-          className={`text-5xl font-semibold mb-10 ${
-            isHovered ? "text-white" : "text-primary"
+          className={`text-5xl font-semibold mb-10 duration-700 ${
+            isHovered ? "text-card_bg" : "text-primary"
           }`}
         >
           {text}
         </h2>
-        <p className="text-dark_black font-semibold mb-20">{desc}</p>
-        <Link href="/projects">
+        <p className={`text-dark_black leading-[140%] mb-20 duration-700 ${
+            isHovered ? "text-card_bg" : "text-dark_black"
+          }`}>{desc}</p>
+        <Link href="/projects" className="inline-block">
           <Button
             text="View Projects"
             styles="bg-btn_color text-white"
@@ -58,7 +60,7 @@ function ServiceCard({ text, desc }) {
         </div>
       </div>
       <div
-        className={`overlay ${isHovered ? "slide-in" : "slide-out"}`}
+        className={` ${isHovered ? "slide-in" : "slide-out"}`}
         style={{
           position: "absolute",
           top: 0,
@@ -89,11 +91,11 @@ function ServiceCard({ text, desc }) {
         }
 
         .slide-in {
-          animation: slide-in 0.5s forwards;
+          animation: slide-in 0.7s forwards;
         }
 
         .slide-out {
-          animation: slide-out 0.5s forwards;
+          animation: slide-out 0.7s forwards;
         }
       `}</style>
     </div>
