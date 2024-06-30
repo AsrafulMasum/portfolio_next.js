@@ -68,7 +68,7 @@ function Projects() {
           <div className="timeline-end lg:-mt-64 xl:-mt-60 lg:ml-12 xl:ml-20 group md:flex md:justify-center md:items-center md:gap-24 lg:block">
             <div>
               <h4 className="text-primary text-2xl font-bold">Get in Touch</h4>
-              <p className="w-80 mt-2 mb-5 text-dark_black text-xl font-medium leading-[140%]">I'm always excited to discuss new opportunities, collaborations, or to simply chat about creative ideas. Feel free to reach out!</p>
+              <p className="w-80 mt-2 mb-5 text-dark_black text-xl font-medium leading-[140%]">I&#39;m always excited to discuss new opportunities, collaborations, or to simply chat about creative ideas. Feel free to reach out!</p>
             </div>
             <Button
               text="Contact Me"
