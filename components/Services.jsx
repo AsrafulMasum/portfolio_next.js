@@ -5,8 +5,8 @@ function Services() {
   return (
     <div className='bg-white'>
       <div className='py-28 text-center'>
-        <h4 className='text-text_color text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-semibold capitalize'>i can provide you</h4>
-        <h2 className='text-primary text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold italic capitalize mt-4'>the best solutions.</h2>
+        <h4 className='text-text_color text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-semibold capitalize'>i can provide you</h4>
+        <h2 className='text-primary text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-bold italic capitalize mt-4'>the best solutions.</h2>
       </div>
       <div className=''>
         <div className='flex flex-col lg:flex-row lg:flex-wrap justify-center'>

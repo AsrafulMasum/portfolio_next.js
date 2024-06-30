@@ -16,6 +16,9 @@ function Sidebar() {
             <li className='px-8 py-4 text-xl'>
                 <Link href="/contact">Contact</Link>
             </li>
+            <li className='px-8 py-4 text-xl'>
+                <Link href="/blogs">Blogs</Link>
+            </li>
         </>
     );
 

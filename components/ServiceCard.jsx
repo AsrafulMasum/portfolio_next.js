@@ -31,7 +31,7 @@ function ServiceCard({ text, desc }) {
         className="h-full w-full relative py-16 xl:py-48 px-8 md:py-24 md:px-16 "
       >
         <h2
-          className={`text-5xl font-semibold mb-10 duration-700 ${
+          className={`text-4xl md:text-5xl font-semibold mb-10 duration-700 ${
             isHovered ? "text-card_bg" : "text-primary"
           }`}
         >

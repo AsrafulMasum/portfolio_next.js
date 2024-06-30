@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import Projects from '@/components/Projects'
+import ScrollToTopButton from '@/components/ScrollToTopButton'
 import React from 'react'
 
 function page() {
@@ -9,6 +10,7 @@ function page() {
       <Navbar />
       <Projects />
       <Footer />
+      <ScrollToTopButton />
     </main>
   )
 }

@@ -25,15 +25,20 @@ function Navbar() {
       <li>
         <Link href="/contact">Contact</Link>
       </li>
+      <li>
+        <Link href="/blogs">Blogs</Link>
+      </li>
     </>
   );
 
   return (
-    <div className="relative text-white z-10">
+    <div className="relative text-white z-50">
       <div className="fixed w-full bg-dark_black py-4">
         <nav className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto flex justify-between items-center">
           <div className="flex justify-center items-center gap-8">
-            <Image src={logo} alt="Logo" width={40} height={40} />
+            <Link href='/' className="inline-block">
+              <Image src={logo} alt="Logo" width={40} height={40} />
+            </Link>
             <ul className="hidden md:flex justify-center items-center gap-8">
               {navLinks}
             </ul>
@@ -48,19 +53,19 @@ function Navbar() {
                 <FaFacebook />
               </a>
               <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://x.com/MasumKa24921110"
-            >
-              <FaXTwitter />
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.instagram.com/hossainmohammadislam"
-            >
-              <FaInstagram />
-            </a>
+                target="_blank"
+                rel="noreferrer"
+                href="https://x.com/MasumKa24921110"
+              >
+                <FaXTwitter />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.instagram.com/hossainmohammadislam"
+              >
+                <FaInstagram />
+              </a>
               <a
                 target="_blank"
                 rel="noreferrer"
