@@ -53,7 +53,7 @@ function ServiceCard({ text, desc }) {
             src={stroke}
             alt="Stroke"
             style={{
-              transition: "transform 0.5s",
+              transition: "transform 0.7s",
               transform: isHovered ? "rotate(29deg)" : "rotate(0deg)",
             }}
           />

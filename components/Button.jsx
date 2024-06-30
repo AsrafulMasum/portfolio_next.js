@@ -11,8 +11,8 @@ function Button({ text, styles, spanStyle, isLoading }) {
       {!isLoading && <span
         className={`relative w-6 h-6 rounded-full overflow-hidden ${spanStyle}`}
       >
-        <IoIosArrowRoundForward className="absolute text-2xl group-hover:translate-x-10 duration-500" />
-        <IoIosArrowRoundForward className="absolute -left-10 text-2xl group-hover:translate-x-0 group-hover:left-0 duration-500" />
+        <IoIosArrowRoundForward className="absolute text-2xl group-hover:translate-x-10 duration-700" />
+        <IoIosArrowRoundForward className="absolute -left-10 text-2xl group-hover:translate-x-0 group-hover:left-0 duration-700" />
       </span>}
     </button>
   );
