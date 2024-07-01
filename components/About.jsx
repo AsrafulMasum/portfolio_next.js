@@ -13,7 +13,7 @@ function About() {
         <div className='h-full lg:w-1/2 flex flex-col justify-center'>
           <h2 className='text-primary text-6xl mb-8'>About Me</h2>
           <h3 className='text-primary text-3xl font-semibold mb-4'>Hello!</h3>
-          <h4 className='text-2xl mb-4 text-dark_black font-medium'>I'm Mohammad Asraful Islam Masum, a passionate, dedicated, hard-working <span className='text-primary text-3xl font-semibold'>MERN</span> stack developer.</h4>
+          <h4 className='text-2xl mb-4 text-dark_black font-medium'>I&#39;m Mohammad Asraful Islam Masum, a passionate, dedicated, hard-working <span className='text-primary text-3xl font-semibold'>MERN</span> stack developer.</h4>
           <p className='text-xl text-dark_black/60 font-medium'>
             A passionate web developer experienced in crafting dynamic applications using the MERN stack (MongoDB, Express.js, React, Node.js). With a keen eye for detail, I specialize in creating user-friendly interfaces. My commitment to delivering high-quality code is complemented by a constant pursuit of the latest industry trends. Excited to contribute my skills and innovation to your projects.
           </p>
