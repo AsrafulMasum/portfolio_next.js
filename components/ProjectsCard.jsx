@@ -51,7 +51,7 @@ function ProjectsCard({ img, title, desc, code, live }) {
       <h4 className="text-primary text-2xl md:text-3xl font-bold mt-8 capitalize">
         {title}
       </h4>
-      <p className="text-[#14141499] text-lg font-medium mt-2 mb-5">{desc}</p>
+      <p className="text-text_color text-lg font-medium mt-2 mb-5">{desc}</p>
     </div>
   );
 }

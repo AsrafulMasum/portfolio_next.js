@@ -35,8 +35,8 @@ function Footer() {
           <Image src={logo} alt="Logo" />
           <div className="mt-10 space-y-8 text-white">
             <p>
-              As a MERN stack developer, I specialize in building robust web
-              applications with MongoDB, Express.js, React.js, and Node.js
+              As a <span className="text-primary font-bold text-lg">MERN</span> stack developer, I specialize in building robust web
+              applications with <span className="text-primary font-bold text-lg">MongoDB, Express.js, React.js, and Node.js </span>
               technologies.
             </p>
             <div>

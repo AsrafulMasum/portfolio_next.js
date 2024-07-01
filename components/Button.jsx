@@ -5,7 +5,7 @@ import { ImSpinner9 } from "react-icons/im";
 function Button({ text, styles, spanStyle, isLoading }) {
   return (
     <button
-      className={`flex justify-center items-center gap-4 text-xl rounded-full p-4 group overflow-hidden ${styles} uppercase`}
+      className={`flex justify-center items-center gap-4 text-xl rounded-full py-4 px-6 group overflow-hidden ${styles} uppercase`}
     >
       {isLoading ? <ImSpinner9 className="animate-spin text-primary mx-20" /> : text}
       {!isLoading && <span

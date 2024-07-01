@@ -9,17 +9,17 @@ function Hero() {
     <div className="lg:h-screen bg-primary py-20 text-white">
       <div className="h-full max-w-screen-xl mx-4 md:mx-10 xl:mx-auto flex flex-col-reverse lg:flex-row justify-between items-center gap-16 lg:gap-0">
         <div className="h-full lg:w-1/2 flex flex-col justify-center gap-10">
-          <h4 className="text-3xl lg:text-5xl font-medium tracking-wide">
+          <h4 className="text-3xl lg:text-5xl font-medium tracking-wide leading-loose">
             MOHAMMAD ASRAFUL ISLAM MASUM
           </h4>
           <div>
-            <h2 className="text-5xl lg:text-7xl font-semibold mb-2">
+            <h2 className="text-5xl lg:text-7xl font-semibold mb-4 text-dark_black tracking-wider">
               WEB DEVELOPER
             </h2>
             <p>
-              I&#39;m a skilled MERN stack web developer with expertise in
-              building dynamic and responsive web applications using MongoDB,
-              Express.js, React, and Node.js. I excel in creating seamless user
+              I&#39;m a skilled <span className="text-dark_black font-bold text-lg">MERN</span> stack web developer with expertise in
+              building dynamic and responsive web applications using <span className="text-dark_black font-bold text-lg">MongoDB,
+              Express.js, React, and Node.js.</span> I excel in creating seamless user
               experiences and efficient back-end solutions.
             </p>
           </div>
