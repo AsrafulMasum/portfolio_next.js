@@ -1,9 +1,8 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
-
 
   const toggleVisibility = () => {
     if (window.pageYOffset > 300) {
@@ -28,7 +27,7 @@ const ScrollToTopButton = () => {
   }, []);
 
   return (
-    <div className="scroll-to-top">
+    <>
       {isVisible && (
         <button
           onClick={scrollToTop}
@@ -37,7 +36,7 @@ const ScrollToTopButton = () => {
           ↑
         </button>
       )}
-    </div>
+    </>
   );
 };
 

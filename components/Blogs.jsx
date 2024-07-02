@@ -2,7 +2,7 @@ import React from "react";
 
 function Blogs() {
   return (
-    <div>
+    <>
       <h2 className="h-screen flex justify-center items-center text-5xl md:text-6xl lg:text-8xl text-primary">
         Coming Soon
         <span
@@ -40,7 +40,7 @@ function Blogs() {
           }
         }
       `}</style>
-    </div>
+    </>
   );
 }
 

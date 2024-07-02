@@ -15,10 +15,11 @@ function ProjectsCard({ img, title, desc, code, live }) {
   };
 
   return (
-    <div>
+    <>
       <div className="relative overflow-hidden">
         <Image className="h-full object-cover" src={img} alt="projects1" />
-        <a target="_blank"
+        <a
+          target="_blank"
           href={live}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
@@ -41,7 +42,8 @@ function ProjectsCard({ img, title, desc, code, live }) {
             />
           </div>
         </a>
-        <a target="_blank"
+        <a
+          target="_blank"
           href={code}
           className="bg-btn_color rounded-full py-2 px-4 absolute top-5 right-5 text-white"
         >
@@ -52,7 +54,7 @@ function ProjectsCard({ img, title, desc, code, live }) {
         {title}
       </h4>
       <p className="text-text_color text-lg font-medium mt-2 mb-5">{desc}</p>
-    </div>
+    </>
   );
 }
 
