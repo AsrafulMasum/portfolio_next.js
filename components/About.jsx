@@ -5,6 +5,7 @@ import react from './../public/react.png'
 import mongoDB from './../public/mongodb.png'
 import express from './../public/express.png'
 import node from './../public/node.png'
+import next from './../public/next.png'
 
 function About() {
   return (
@@ -21,9 +22,9 @@ function About() {
         <Image className='absolute top-44 right-0 w-20 animate-pulse' src={mongoDB} alt='' />
         <Image className='absolute top-80 right-36 w-20 animate-bounce' src={js} alt='' />
         <Image className='absolute top-64 right-96 w-20 animate-spin' src={react} alt='' />
-        <Image className='absolute top-[450px] right-80 w-20 animate-pulse' src={express} alt='' />
-        <Image className='absolute top-[580px] right-16 w-20' src={node} alt='' />
-        <Image className='absolute top-[680px] right-64 w-20' src={js} alt='' />
+        <Image className='absolute top-[450px] right-72 w-12 animate-ping' src={express} alt='' />
+        <Image className='absolute top-[550px] right-16 w-20 animate-pulse' src={node} alt='' />
+        <Image className='absolute top-[500px] right-[450px] w-20 animate-pulse' src={next} alt='' />
       </div>
     </section>
   )
