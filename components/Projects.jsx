@@ -2,7 +2,7 @@ import React from "react";
 import eventImg from "./../public/event.png";
 import recipeImg from "./../public/recipe.png";
 import forumImg from "./../public/flarum.PNG";
-import assignmentImg from "./../public/assignment.PNG.jpg";
+import assignmentImg from "./../public/assignment.png";
 import ProjectsCard from "./ProjectsCard";
 import ShowReel from "./ShowReel";
 import Button from "./Button";
@@ -21,7 +21,7 @@ function Projects() {
           <div className="lg:hidden"><ShowReel /></div>
         </li>
         <li>
-          <div className="timeline-end md:-mt-12 lg:-mt-40 lg:ml-12 xl:ml-20 group">
+          <div className="timeline-end md:-mt-12 lg:-mt-48 lg:ml-12 xl:ml-20 group">
             <ProjectsCard
               title="Recipe Viewer Website"
               desc="Welcome to Recipe Realm, your ultimate destination for delicious and easy-to-follow recipes!"
@@ -32,7 +32,7 @@ function Projects() {
           </div>
         </li>
         <li>
-          <div className="timeline-start lg:-mt-64 xl:-mt-60 lg:mr-12 xl:mr-20 group">
+          <div className="timeline-start lg:-mt-80 xl:-mt-[400px] lg:mr-12 xl:mr-20 group">
             <ProjectsCard
               title="Event Manegement Website"
               desc="E Guidance is a event management website with front-end only. It is a digital platform that simplifies the planning, promotion, and coordination of events."
@@ -54,9 +54,9 @@ function Projects() {
           </div>
         </li>
         <li>
-          <div className="timeline-start lg:-mt-64 xl:-mt-60 lg:mr-12 xl:mr-20 group">
+          <div className="timeline-start lg:-mt-80 xl:-mt-[400px] lg:mr-12 xl:mr-20 group">
             <ProjectsCard
-              title="Event Manegement Website"
+              title="Assignment Manegement Website"
               desc="eduCare is a education based website with assignments task . It is an online platform designed for students to manage coursework."
               img={assignmentImg}
               live="https://educare-fe496.web.app"

@@ -17,7 +17,7 @@ function ProjectsCard({ img, title, desc, code, live }) {
   return (
     <div>
       <div className="relative overflow-hidden">
-        <Image className="h-96 object-cover" src={img} alt="projects1" />
+        <Image className="h-full object-cover" src={img} alt="projects1" />
         <a target="_blank"
           href={live}
           onMouseOver={handleMouseOver}
