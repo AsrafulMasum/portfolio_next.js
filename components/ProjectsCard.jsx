@@ -22,9 +22,9 @@ function ProjectsCard({ img, title, desc, code, live }) {
           href={live}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
-          className="cursor-pointer h-28 lg:h-36 w-28 lg:w-36 bg-white/30 rounded-full backdrop-blur-lg absolute -bottom-20 group-hover:bottom-10 lg:group-hover:bottom-5 xl:group-hover:bottom-10 duration-700 left-1/2 p-4 group"
+          className="cursor-pointer h-28 lg:h-36 w-28 lg:w-36 bg-dark_black/30 rounded-full backdrop-blur-xl absolute -bottom-6 group-hover:bottom-1/2 lg:group-hover:bottom-1/2 xl:group-hover:bottom-1/2 duration-700 left-1/2 p-4 group"
           style={{
-            transform: "translate(-50%)",
+            transform: "translate(-50%, 50%)",
           }}
         >
           <div className="h-20 lg:h-28 w-20 lg:w-28 rounded-full border border-white/30 p-4 lg:p-8">

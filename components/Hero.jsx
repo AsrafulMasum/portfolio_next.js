@@ -13,7 +13,7 @@ function Hero() {
             MOHAMMAD ASRAFUL ISLAM MASUM
           </h4>
           <div>
-            <h2 className="text-5xl lg:text-7xl font-semibold mb-4 text-dark_black tracking-wider">
+            <h2 className="text-5xl lg:text-7xl font-semibold mb-4 tracking-wider">
               WEB DEVELOPER
             </h2>
             <p>
