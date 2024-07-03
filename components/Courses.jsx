@@ -10,14 +10,6 @@ import Button from "./Button";
 function Courses() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // const openPDFModal = () => {
-  //   setIsOpenPDF(true);
-  // };
-
-  // const closePDFModal = () => {
-  //   setIsOpenPDF(false);
-  // };
-
   return (
     <>
       <h4 className="border-b border-dark_black inline-block mt-4 text-xl font-medium text-dark_black">
@@ -52,12 +44,12 @@ function Courses() {
         <div className="fixed inset-0 flex w-screen min-h-screen items-center justify-center p-4">
           <DialogPanel className="w-full space-y-4 border bg-white p-12">
             <DialogTitle className="text-lg font-medium leading-6 text-dark_black">Certificate</DialogTitle>
-            <embed
-              src="/PHcertificate.pdf#toolbar=0"
-              type="application/pdf"
-              width="100%"
-              height="500px"
-            />
+            <iframe
+                title="PDF Viewer"
+                src="/PHcertificate.pdf"
+                width="100%"
+                height="400px"
+              />
             <div className="flex gap-4">
               <div onClick={() => setIsOpen(false)} className="inline-block">
                 <Button
