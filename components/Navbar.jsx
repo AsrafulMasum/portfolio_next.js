@@ -96,7 +96,7 @@ function Navbar() {
         <div onClick={() => setOpen((prev) => !prev)} className="flex justify-end mb-4 mr-4">
           <IoIosClose className="text-3xl cursor-pointer" />
         </div>
-        <Sidebar />
+        <Sidebar setOpen={setOpen} open={open} />
       </aside>
     </div>
   );

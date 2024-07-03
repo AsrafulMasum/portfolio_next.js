@@ -2,12 +2,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-function Sidebar() {
+function Sidebar({ open, setOpen }) {
   const pathName = usePathname();
 
   const navLinks = (
     <>
       <li
+        onClick={() => setOpen((prev) => !prev)}
         className={`px-8 py-4 text-xl ${
           pathName === "/" ? "bg-primary" : "bg-none"
         }`}
@@ -15,6 +16,7 @@ function Sidebar() {
         <Link href="/">Home</Link>
       </li>
       <li
+        onClick={() => setOpen((prev) => !prev)}
         className={`px-8 py-4 text-xl ${
           pathName === "/projects" ? "bg-primary" : "bg-none"
         }`}
@@ -22,6 +24,7 @@ function Sidebar() {
         <Link href="/projects">Projects</Link>
       </li>
       <li
+        onClick={() => setOpen((prev) => !prev)}
         className={`px-8 py-4 text-xl ${
           pathName === "/about" ? "bg-primary" : "bg-none"
         }`}
@@ -29,6 +32,7 @@ function Sidebar() {
         <Link href="/about">About</Link>
       </li>
       <li
+        onClick={() => setOpen((prev) => !prev)}
         className={`px-8 py-4 text-xl ${
           pathName === "/contact" ? "bg-primary" : "bg-none"
         }`}
@@ -36,6 +40,7 @@ function Sidebar() {
         <Link href="/contact">Contact</Link>
       </li>
       <li
+        onClick={() => setOpen((prev) => !prev)}
         className={`px-8 py-4 text-xl ${
           pathName === "/blogs" ? "bg-primary" : "bg-none"
         }`}
