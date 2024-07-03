@@ -37,7 +37,7 @@ function ContactForm() {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className="lg:w-3/4 mx-auto my-20"
+      className="lg:w-3/4 ml-auto my-20"
     >
       <label className="text-[#141414] text-xl font-medium">Full Name</label>
       <input
