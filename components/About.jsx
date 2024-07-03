@@ -89,7 +89,7 @@ function About() {
 
   return (
     <>
-      <section className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto mt-28 md:mt-5 lg:mt-0">
+      <section className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto md:mt-5 lg:mt-0">
         <div className="h-screen flex justify-between items-center lg:mt-10 xl:mt-0">
           <div className="h-full lg:w-1/2 flex flex-col justify-center">
             <h2 className="text-primary text-6xl mb-8">About Me</h2>
