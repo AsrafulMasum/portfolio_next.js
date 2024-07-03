@@ -3,11 +3,6 @@ import React, { useRef, useState } from "react";
 import Button from "./Button";
 import emailjs from "emailjs-com";
 
-const serviceId = process.env.SERVICE_ID;
-const templateId = process.env.TEMPLATE_ID;
-const publicKey = process.env.PUBLIC_KEY;
-console.log(serviceId, templateId, publicKey);
-
 function ContactForm() {
   const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
   const templateId = process.env.NEXT_PUBLIC_TEMPLETE_ID;
