@@ -22,6 +22,7 @@ import { GrStripe } from "react-icons/gr";
 import Education from "./Education";
 import Lottie from "lottie-react";
 import eduGIF from "./../public/eduAnimation.json";
+import Courses from "./Courses";
 
 function About() {
   const skillsSetA = [
@@ -180,6 +181,10 @@ function About() {
             <Education />
           </div>
         </div>
+      </section>
+      <section className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto mt-10 mb-20">
+        <h2 className="text-primary text-6xl">Professional Courses</h2>
+        <Courses />
       </section>
     </>
   );
