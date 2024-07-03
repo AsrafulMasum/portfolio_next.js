@@ -3,7 +3,16 @@ import React, { useRef, useState } from "react";
 import Button from "./Button";
 import emailjs from "emailjs-com";
 
+const serviceId = process.env.SERVICE_ID;
+const templateId = process.env.TEMPLATE_ID;
+const publicKey = process.env.PUBLIC_KEY;
+console.log(serviceId, templateId, publicKey);
+
 function ContactForm() {
+  const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
+  const templateId = process.env.NEXT_PUBLIC_TEMPLETE_ID;
+  const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+
   const formRef = useRef();
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -15,25 +24,18 @@ function ContactForm() {
     setError(false);
     setSuccess(false);
 
-    emailjs
-      .sendForm(
-        process.env.SERVICE_ID,
-        process.env.TEMPLETE_ID,
-        formRef.current,
-        process.env.PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setSuccess(true);
-          e.target.reset();
-          setLoading(false);
-        },
-        (error) => {
-          setError(true);
-          setLoading(false);
-          console.log(error);
-        }
-      );
+    emailjs.sendForm(serviceId, templateId, formRef.current, publicKey).then(
+      () => {
+        setSuccess(true);
+        e.target.reset();
+        setLoading(false);
+      },
+      (error) => {
+        console.error("EmailJS Error:", error);
+        setError(true);
+        setLoading(false);
+      }
+    );
   };
 
   return (
@@ -42,7 +44,7 @@ function ContactForm() {
       onSubmit={handleSubmit}
       className="lg:w-3/4 mx-auto my-20"
     >
-      <level className="text-[#141414] text-xl font-medium">Full Name</level>
+      <label className="text-[#141414] text-xl font-medium">Full Name</label>
       <input
         className="w-full h-11 mt-5 mb-10 outline-none bg-white border-b-2 border-[#141414] border-opacity-60 text-[#141414] text-opacity-60 font-medium text-lg placeholder:text-[#141414] placeholder:text-opacity-60 placeholder:font-medium placeholder:text-lg"
         type="text"
@@ -51,7 +53,7 @@ function ContactForm() {
         name="name"
       />
 
-      <level className="text-[#141414] text-xl font-medium">Email</level>
+      <label className="text-[#141414] text-xl font-medium">Email</label>
       <input
         className="w-full h-11 mt-5 mb-10 outline-none bg-white border-b-2 border-[#141414] border-opacity-60 text-[#141414] text-opacity-60 font-medium text-lg placeholder:text-[#141414] placeholder:text-opacity-60 placeholder:font-medium placeholder:text-lg"
         type="email"
@@ -60,7 +62,7 @@ function ContactForm() {
         name="email"
       />
 
-      <level className="text-[#141414] text-xl font-medium">Message</level>
+      <label className="text-[#141414] text-xl font-medium">Message</label>
       <textarea
         className="w-full h-11 mt-5 mb-10 outline-none bg-white border-b-2 border-[#141414] border-opacity-60 text-[#141414] text-opacity-60 font-medium text-lg placeholder:text-[#141414] placeholder:text-opacity-60 placeholder:font-medium placeholder:text-lg"
         placeholder="Tell us more about your idea"

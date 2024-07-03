@@ -27,10 +27,10 @@ function ShowReel() {
       transform: rotate(0deg) scale(1);
     }
     50% {
-      transform: rotate(-150deg) scale(0.8); /* Rotate halfway and scale down */
+      transform: rotate(-150deg) scale(0.8);
     }
     100% {
-      transform: rotate(-300deg) scale(1); /* Rotate fully and return to original scale */
+      transform: rotate(-300deg) scale(1);
     }
   }
 `}</style>
