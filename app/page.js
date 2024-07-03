@@ -9,13 +9,10 @@ import Services from "@/components/Services";
 export default function Home() {
   return (
     <main className="overflow-hidden">
-      <Navbar />
       <Hero />
       <MarqueeSlider />
       <DevInfo />
       <Services />
-      <Footer />
-      <ScrollToTopButton />
     </main>
   );
 }

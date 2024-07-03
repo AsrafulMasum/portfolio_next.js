@@ -17,10 +17,10 @@ function ContactForm() {
 
     emailjs
       .sendForm(
-        "service_jp81xr9",
-        "template_4m45u1j",
+        process.env.SERVICE_ID,
+        process.env.TEMPLETE_ID,
         formRef.current,
-        "GKyL1Z6arBu3aR7qW"
+        process.env.PUBLIC_KEY
       )
       .then(
         () => {
@@ -42,9 +42,7 @@ function ContactForm() {
       onSubmit={handleSubmit}
       className="lg:w-3/4 mx-auto my-20"
     >
-      <level className="text-[#141414] text-xl font-medium">
-        Full Name
-      </level>
+      <level className="text-[#141414] text-xl font-medium">Full Name</level>
       <input
         className="w-full h-11 mt-5 mb-10 outline-none bg-white border-b-2 border-[#141414] border-opacity-60 text-[#141414] text-opacity-60 font-medium text-lg placeholder:text-[#141414] placeholder:text-opacity-60 placeholder:font-medium placeholder:text-lg"
         type="text"
@@ -53,9 +51,7 @@ function ContactForm() {
         name="name"
       />
 
-      <level className="text-[#141414] text-xl font-medium">
-        Email
-      </level>
+      <level className="text-[#141414] text-xl font-medium">Email</level>
       <input
         className="w-full h-11 mt-5 mb-10 outline-none bg-white border-b-2 border-[#141414] border-opacity-60 text-[#141414] text-opacity-60 font-medium text-lg placeholder:text-[#141414] placeholder:text-opacity-60 placeholder:font-medium placeholder:text-lg"
         type="email"
@@ -64,9 +60,7 @@ function ContactForm() {
         name="email"
       />
 
-      <level className="text-[#141414] text-xl font-medium">
-        Message
-      </level>
+      <level className="text-[#141414] text-xl font-medium">Message</level>
       <textarea
         className="w-full h-11 mt-5 mb-10 outline-none bg-white border-b-2 border-[#141414] border-opacity-60 text-[#141414] text-opacity-60 font-medium text-lg placeholder:text-[#141414] placeholder:text-opacity-60 placeholder:font-medium placeholder:text-lg"
         placeholder="Tell us more about your idea"

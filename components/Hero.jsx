@@ -9,7 +9,7 @@ function Hero() {
     <div className="lg:h-screen bg-primary py-20 text-white">
       <div className="h-full max-w-screen-xl mx-4 md:mx-10 xl:mx-auto flex flex-col-reverse lg:flex-row justify-between items-center gap-16 lg:gap-0">
         <div className="h-full lg:w-1/2 flex flex-col justify-center gap-10">
-          <h4 className="text-3xl lg:text-5xl font-medium tracking-wide leading-loose">
+          <h4 className="text-3xl lg:text-5xl font-medium tracking-wide">
             MOHAMMAD ASRAFUL ISLAM MASUM
           </h4>
           <div>

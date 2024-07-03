@@ -15,7 +15,7 @@ function DevInfo() {
         </div>
       </div>
       <div className="lg:w-1/2 xl:w-3/5 relative">
-        <div className="w-2/3 mt-16 md:mt-20 xl:mt-28 ml-16 md:ml-20 xl:ml-28 text-dark_black">
+        <div className="w-2/3 mt-16 md:mt-20 xl:mt-28 ml-8 md:ml-20 xl:ml-28 text-dark_black">
           <h4 className="text-3xl md:text-6xl font-semibold mb-12 text-text_color">
             Elevate{" "}
             <span className="text-primary italic">
