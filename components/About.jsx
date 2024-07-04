@@ -54,6 +54,21 @@ const imgVariants = {
   },
 };
 
+const skillsVariants = {
+  initial: {
+    x: 200,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 function About() {
   const skillsSet = [
     {
@@ -122,16 +137,33 @@ function About() {
             variants={textVariants}
             initial="initial"
             whileInView="animate"
-            className="h-full lg:w-1/2 flex flex-col justify-center">
-            <motion.h2 variants={textVariants} className="text-primary text-6xl mb-8">About Me</motion.h2>
-            <motion.h3 variants={textVariants} className="text-primary text-3xl font-semibold mb-4">Hello!</motion.h3>
-            <motion.h4 variants={textVariants} className="text-2xl mb-4 text-dark_black font-medium">
+            className="h-full lg:w-1/2 flex flex-col justify-center"
+          >
+            <motion.h2
+              variants={textVariants}
+              className="text-primary text-6xl mb-8"
+            >
+              About Me
+            </motion.h2>
+            <motion.h3
+              variants={textVariants}
+              className="text-primary text-3xl font-semibold mb-4"
+            >
+              Hello!
+            </motion.h3>
+            <motion.h4
+              variants={textVariants}
+              className="text-2xl mb-4 text-dark_black font-medium"
+            >
               I&#39;m Mohammad Asraful Islam Masum, a passionate, dedicated,
               hard-working{" "}
               <span className="text-primary text-3xl font-semibold">MERN</span>{" "}
               stack developer.
             </motion.h4>
-            <motion.p variants={textVariants} className="text-xl text-dark_black/60 font-medium z-10">
+            <motion.p
+              variants={textVariants}
+              className="text-xl text-dark_black/60 font-medium z-10"
+            >
               A passionate web developer experienced in crafting dynamic
               applications using the MERN stack (MongoDB, Express.js, React,
               Node.js). With a keen eye for detail, I specialize in creating
@@ -145,7 +177,8 @@ function About() {
             variants={imgVariants}
             initial="initial"
             whileInView="animate"
-            className="relative hidden lg:block lg:w-1/2 h-full lg:-mt-40 xl:mt-0 2xl:mt-96">
+            className="relative hidden lg:block lg:w-1/2 h-full lg:-mt-40 xl:mt-0 2xl:mt-96"
+          >
             <Image
               className="absolute top-44 right-0 w-20 animate-pulse hidden lg:block"
               src={mongoDB}
@@ -179,35 +212,79 @@ function About() {
           </motion.div>
         </div>
       </section>
+
       <section className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto mt-10 mb-20">
-        <h2 className="text-primary text-6xl mb-8">Skills</h2>
+        <motion.h2
+          variants={textVariants}
+          initial="initial"
+          whileInView="animate"
+          className="text-primary text-6xl mb-8"
+        >
+          Skills
+        </motion.h2>
         <div className="flex flex-col md:flex-row justify-between items-center md:gap-20 lg:gap-40">
-          <div className="w-full grid grid-cols-1 md:grid-cols-2">
+          <motion.div
+            variants={skillsVariants}
+            initial="initial"
+            whileInView="animate"
+            className="w-full grid grid-cols-1 md:grid-cols-2"
+          >
             {skillsSet?.map((skill, idx) => (
-              <div
+              <motion.div
+                variants={skillsVariants}
                 key={idx}
-                className={`flex justify-between items-center p-4 border-b-[1.5px] border-[#D6D6D6] ${idx % 2 === 0 ? "mr-0 md:mr-5 lg:mr-10" : "ml-0 md:ml-5 lg:ml-10"}`}
+                className={`flex justify-between items-center p-4 border-b-[1.5px] border-[#D6D6D6] ${
+                  idx % 2 === 0
+                    ? "mr-0 md:mr-5 lg:mr-10"
+                    : "ml-0 md:ml-5 lg:ml-10"
+                }`}
               >
                 <h2 className="text-2xl text-dark_black">{skill?.skill}</h2>
                 <div>{skill?.icon}</div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
+
       <section className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto mt-10 mb-20">
-        <h2 className="text-primary text-6xl">Education</h2>
+        <motion.h2
+          variants={textVariants}
+          initial="initial"
+          whileInView="animate"
+          className="text-primary text-6xl"
+        >
+          Education
+        </motion.h2>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-20">
-          <div className="flex-1">
+          <motion.div
+            variants={textVariants}
+            initial="initial"
+            whileInView="animate"
+            className="flex-1"
+          >
             <Lottie animationData={eduGIF}></Lottie>
-          </div>
-          <div className="flex-1">
+          </motion.div>
+          <motion.div
+            variants={skillsVariants}
+            initial="initial"
+            whileInView="animate"
+            className="flex-1"
+          >
             <Education />
-          </div>
+          </motion.div>
         </div>
       </section>
+
       <section className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto mt-10 mb-20">
-        <h2 className="text-primary text-6xl">Professional Courses</h2>
+        <motion.h2
+          variants={skillsVariants}
+          initial="initial"
+          whileInView="animate"
+          className="text-primary text-6xl"
+        >
+          Professional Courses
+        </motion.h2>
         <Courses />
       </section>
     </>
