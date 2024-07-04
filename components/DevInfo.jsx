@@ -1,21 +1,75 @@
+'use client'
 import Image from "next/image";
 import React from "react";
 import coding from "./../public/bg.jpg";
 import stroke from "./../public/dev_stroke.png";
 import Button from "./Button";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const textVariants = {
+  initial: {
+    y: -200,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
+const serviceVariants = {
+  initial: {
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const strokeVariants = {
+  initial: {
+    x: 100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 function DevInfo() {
   return (
     <div className="flex flex-col lg:flex-row bg-white">
-      <div className="lg:w-1/2 xl:w-2/5 relative">
+      <div className="lg:w-1/2 xl:w-2/5 relative overflow-hidden">
         <Image className="h-full object-cover lg:object-fill " src={coding} alt="" />
-        <div className="absolute right-0 bottom-0 bg-primary text-white py-8 px-4 text-center uppercase font-semibold">
+        <motion.div
+          variants={serviceVariants}
+          initial="initial"
+          whileInView="animate"
+          className="absolute right-0 bottom-0 bg-primary text-white py-16 px-8 text-center uppercase font-semibold">
           <span className="text-7xl">2</span> <br /> years experience
-        </div>
+        </motion.div>
       </div>
-      <div className="lg:w-1/2 xl:w-3/5 relative">
-        <div className="w-2/3 mt-16 md:mt-20 xl:mt-28 ml-8 md:ml-20 xl:ml-28 text-dark_black">
+      <div className="lg:w-1/2 xl:w-3/5 relative overflow-hidden">
+        <motion.div
+          variants={textVariants}
+          initial="initial"
+          whileInView="animate"
+          className="w-2/3 mt-16 md:mt-20 xl:mt-28 ml-8 md:ml-20 xl:ml-28 text-dark_black">
           <h4 className="text-3xl md:text-6xl font-semibold mb-12 text-text_color">
             Elevate{" "}
             <span className="text-primary italic">
@@ -41,8 +95,12 @@ function DevInfo() {
               spanStyle="bg-primary text-white"
             />
           </Link>
-        </div>
-        <div className="mt-28 flex items-center">
+        </motion.div>
+        <motion.div
+          variants={serviceVariants}
+          initial="initial"
+          whileInView="animate"
+          className="mt-28 flex items-center">
           <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-12">
             <span className="text-4xl text-primary">5+</span> <br /> website
             Development
@@ -52,15 +110,21 @@ function DevInfo() {
             Development
           </div>
           <div className="border text-center font-semibold text-dark_black capitalize flex-1 py-12">
-            <span className="text-4xl text-primary">5+</span> <br /> Api <br className="md:hidden"/>
+            <span className="text-4xl text-primary">5+</span> <br /> Api <br className="md:hidden" />
             Development
           </div>
-        </div>
-        <Image
-          className="w-40 absolute right-0 bottom-16"
-          src={stroke}
-          alt=""
-        />
+        </motion.div>
+        <motion.div
+          variants={strokeVariants}
+          initial="initial"
+          whileInView="animate"
+        >
+          <Image
+            className="w-40 absolute right-0 bottom-16"
+            src={stroke}
+            alt=""
+          />
+        </motion.div>
       </div>
     </div>
   );

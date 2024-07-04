@@ -155,17 +155,6 @@ function About() {
               </div>
             ))}
           </div>
-          {/* <div className="w-full">
-            {skillsSetB?.map((skill, idx) => (
-              <div
-                key={idx}
-                className="flex justify-between items-center p-4 border-b-[1.5px] border-[#D6D6D6]"
-              >
-                <h2 className="text-2xl text-dark_black">{skill?.skill}</h2>
-                <span>{skill?.icon}</span>
-              </div>
-            ))}
-          </div> */}
         </div>
       </section>
       <section className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto mt-10 mb-20">
