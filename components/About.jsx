@@ -25,7 +25,7 @@ import eduGIF from "./../public/eduAnimation.json";
 import Courses from "./Courses";
 
 function About() {
-  const skillsSetA = [
+  const skillsSet = [
     {
       skill: "HTML",
       icon: <FaHtml5 className="text-5xl text-primary" />,
@@ -54,9 +54,6 @@ function About() {
       skill: "Express.js",
       icon: <SiExpress className="text-5xl text-primary" />,
     },
-  ];
-
-  const skillsSetB = [
     {
       skill: "MongoDB",
       icon: <SiMongodb className="text-5xl text-primary" />,
@@ -147,18 +144,18 @@ function About() {
       <section className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto mt-10 mb-20">
         <h2 className="text-primary text-6xl mb-8">Skills</h2>
         <div className="flex flex-col md:flex-row justify-between items-center md:gap-20 lg:gap-40">
-          <div className="w-full">
-            {skillsSetA?.map((skill, idx) => (
+          <div className="w-full grid grid-cols-1 md:grid-cols-2">
+            {skillsSet?.map((skill, idx) => (
               <div
                 key={idx}
-                className="flex justify-between items-center p-4 border-b-[1.5px] border-[#D6D6D6]"
+                className={`flex justify-between items-center p-4 border-b-[1.5px] border-[#D6D6D6] ${idx % 2 === 0 ? "mr-0 md:mr-5 lg:mr-10" : "ml-0 md:ml-5 lg:ml-10"}`}
               >
                 <h2 className="text-2xl text-dark_black">{skill?.skill}</h2>
                 <div>{skill?.icon}</div>
               </div>
             ))}
           </div>
-          <div className="w-full">
+          {/* <div className="w-full">
             {skillsSetB?.map((skill, idx) => (
               <div
                 key={idx}
@@ -168,7 +165,7 @@ function About() {
                 <span>{skill?.icon}</span>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
       <section className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto mt-10 mb-20">
