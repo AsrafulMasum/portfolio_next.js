@@ -23,6 +23,36 @@ import Education from "./Education";
 import Lottie from "lottie-react";
 import eduGIF from "./../public/eduAnimation.json";
 import Courses from "./Courses";
+import { motion } from "framer-motion";
+
+const textVariants = {
+  initial: {
+    x: -200,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const imgVariants = {
+  initial: {
+    y: -200,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
 
 function About() {
   const skillsSet = [
@@ -88,16 +118,20 @@ function About() {
     <>
       <section className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto md:mt-5 lg:mt-0">
         <div className="h-screen flex justify-between items-center lg:mt-10 xl:mt-0">
-          <div className="h-full lg:w-1/2 flex flex-col justify-center">
-            <h2 className="text-primary text-6xl mb-8">About Me</h2>
-            <h3 className="text-primary text-3xl font-semibold mb-4">Hello!</h3>
-            <h4 className="text-2xl mb-4 text-dark_black font-medium">
+          <motion.div
+            variants={textVariants}
+            initial="initial"
+            whileInView="animate"
+            className="h-full lg:w-1/2 flex flex-col justify-center">
+            <motion.h2 variants={textVariants} className="text-primary text-6xl mb-8">About Me</motion.h2>
+            <motion.h3 variants={textVariants} className="text-primary text-3xl font-semibold mb-4">Hello!</motion.h3>
+            <motion.h4 variants={textVariants} className="text-2xl mb-4 text-dark_black font-medium">
               I&#39;m Mohammad Asraful Islam Masum, a passionate, dedicated,
               hard-working{" "}
               <span className="text-primary text-3xl font-semibold">MERN</span>{" "}
               stack developer.
-            </h4>
-            <p className="text-xl text-dark_black/60 font-medium z-10">
+            </motion.h4>
+            <motion.p variants={textVariants} className="text-xl text-dark_black/60 font-medium z-10">
               A passionate web developer experienced in crafting dynamic
               applications using the MERN stack (MongoDB, Express.js, React,
               Node.js). With a keen eye for detail, I specialize in creating
@@ -105,9 +139,13 @@ function About() {
               code is complemented by a constant pursuit of the latest industry
               trends. Excited to contribute my skills and innovation to your
               projects.
-            </p>
-          </div>
-          <div className="relative hidden lg:block lg:w-1/2 h-full lg:-mt-40 xl:mt-0 2xl:mt-96">
+            </motion.p>
+          </motion.div>
+          <motion.div
+            variants={imgVariants}
+            initial="initial"
+            whileInView="animate"
+            className="relative hidden lg:block lg:w-1/2 h-full lg:-mt-40 xl:mt-0 2xl:mt-96">
             <Image
               className="absolute top-44 right-0 w-20 animate-pulse hidden lg:block"
               src={mongoDB}
@@ -138,7 +176,7 @@ function About() {
               src={next}
               alt=""
             />
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto mt-10 mb-20">
