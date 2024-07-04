@@ -69,6 +69,21 @@ const skillsVariants = {
   },
 };
 
+const eduVariants = {
+  initial: {
+    y: 200,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 function About() {
   const skillsSet = [
     {
@@ -266,7 +281,7 @@ function About() {
             <Lottie animationData={eduGIF}></Lottie>
           </motion.div>
           <motion.div
-            variants={skillsVariants}
+            variants={eduVariants}
             initial="initial"
             whileInView="animate"
             className="flex-1"
