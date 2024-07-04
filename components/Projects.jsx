@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import eventImg from "./../public/event.png";
 import recipeImg from "./../public/recipe.png";
@@ -6,12 +7,62 @@ import assignmentImg from "./../public/assignment.png";
 import ProjectsCard from "./ProjectsCard";
 import ShowReel from "./ShowReel";
 import Button from "./Button";
+import { motion } from "framer-motion";
+
+const textVariants = {
+  initial: {
+    y: -200,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const leftVariants = {
+  initial: {
+    x: -200,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const rightVariants = {
+  initial: {
+    x: 200,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 function Projects() {
   return (
     <div className="bg-white py-20 md:py-12 lg:py-28">
       <ul className="timeline max-lg:timeline-compact timeline-vertical max-w-screen-xl mx-4 md:mx-10 xl:mx-auto space-y-16 lg:space-y-0">
-        <li className="flex">
+        <motion.li
+          variants={textVariants}
+          initial="initial"
+          whileInView="animate"
+          className="flex">
           <div className="timeline-start w-full">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold">
               My recent <br />{" "}
@@ -19,8 +70,12 @@ function Projects() {
             </h2>
           </div>
           <div className="lg:hidden"><ShowReel /></div>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li
+          variants={rightVariants}
+          initial="initial"
+          whileInView="animate"
+        >
           <div className="timeline-end md:-mt-12 lg:-mt-48 lg:ml-12 xl:ml-20 group">
             <ProjectsCard
               title="Recipe Viewer Website"
@@ -30,8 +85,12 @@ function Projects() {
               code="https://github.com/AsrafulMasum/PH-Assessment"
             />
           </div>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li
+          variants={leftVariants}
+          initial="initial"
+          whileInView="animate"
+        >
           <div className="timeline-start lg:-mt-80 xl:-mt-[400px] lg:mr-12 xl:mr-20 group">
             <ProjectsCard
               title="Event Manegement Website"
@@ -41,8 +100,12 @@ function Projects() {
               code="https://github.com/AsrafulMasum/E-Guidance"
             />
           </div>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li
+          variants={rightVariants}
+          initial="initial"
+          whileInView="animate"
+        >
           <div className="timeline-end lg:-mt-64 xl:-mt-60 lg:ml-12 xl:ml-20 group">
             <ProjectsCard
               title="forum discussions Website"
@@ -52,8 +115,12 @@ function Projects() {
               code="https://github.com/AsrafulMasum/Flarum"
             />
           </div>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li
+          variants={leftVariants}
+          initial="initial"
+          whileInView="animate"
+        >
           <div className="timeline-start lg:-mt-80 xl:-mt-[400px] lg:mr-12 xl:mr-20 group">
             <ProjectsCard
               title="Assignment Manegement Website"
@@ -63,8 +130,12 @@ function Projects() {
               code="https://github.com/AsrafulMasum/edu-Care"
             />
           </div>
-        </li>
-        <li>
+        </motion.li>
+        <motion.li
+          variants={rightVariants}
+          initial="initial"
+          whileInView="animate"
+        >
           <div className="timeline-end lg:-mt-64 xl:-mt-60 lg:ml-12 xl:ml-20 group md:flex md:justify-center md:items-center md:gap-24 lg:block">
             <div>
               <h4 className="text-primary text-2xl font-bold">Get in Touch</h4>
@@ -76,7 +147,7 @@ function Projects() {
               spanStyle="bg-primary text-white"
             />
           </div>
-        </li>
+        </motion.li>
       </ul>
     </div>
   );
