@@ -8,44 +8,34 @@ function Sidebar({ open, setOpen }) {
   const navLinks = (
     <>
       <li
-        onClick={() => setOpen((prev) => !prev)}
-        className={`px-8 py-4 text-xl ${
-          pathName === "/" ? "bg-primary" : "bg-none"
-        }`}
+        className={`px-8 py-4 text-xl ${pathName === "/" ? "bg-primary" : "bg-none"
+          }`}
       >
-        <Link href="/">Home</Link>
+        <Link onClick={() => setOpen((prev) => !prev)} href="/">Home</Link>
       </li>
       <li
-        onClick={() => setOpen((prev) => !prev)}
-        className={`px-8 py-4 text-xl ${
-          pathName === "/projects" ? "bg-primary" : "bg-none"
-        }`}
+        className={`px-8 py-4 text-xl ${pathName === "/projects" ? "bg-primary" : "bg-none"
+          }`}
       >
-        <Link href="/projects">Projects</Link>
+        <Link onClick={() => setOpen((prev) => !prev)} href="/projects">Projects</Link>
       </li>
       <li
-        onClick={() => setOpen((prev) => !prev)}
-        className={`px-8 py-4 text-xl ${
-          pathName === "/about" ? "bg-primary" : "bg-none"
-        }`}
+        className={`px-8 py-4 text-xl ${pathName === "/about" ? "bg-primary" : "bg-none"
+          }`}
       >
-        <Link href="/about">About</Link>
+        <Link onClick={() => setOpen((prev) => !prev)} href="/about">About</Link>
       </li>
       <li
-        onClick={() => setOpen((prev) => !prev)}
-        className={`px-8 py-4 text-xl ${
-          pathName === "/contact" ? "bg-primary" : "bg-none"
-        }`}
+        className={`px-8 py-4 text-xl ${pathName === "/contact" ? "bg-primary" : "bg-none"
+          }`}
       >
-        <Link href="/contact">Contact</Link>
+        <Link onClick={() => setOpen((prev) => !prev)} href="/contact">Contact</Link>
       </li>
       <li
-        onClick={() => setOpen((prev) => !prev)}
-        className={`px-8 py-4 text-xl ${
-          pathName === "/blogs" ? "bg-primary" : "bg-none"
-        }`}
+        className={`px-8 py-4 text-xl ${pathName === "/blogs" ? "bg-primary" : "bg-none"
+          }`}
       >
-        <Link href="/blogs">Blogs</Link>
+        <Link onClick={() => setOpen((prev) => !prev)} href="/blogs">Blogs</Link>
       </li>
     </>
   );

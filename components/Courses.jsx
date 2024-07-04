@@ -41,15 +41,18 @@ function Courses() {
         onClose={() => setIsOpen(false)}
         className="fixed inset-0 z-50 overflow-y-auto"
       >
-        <div className="fixed inset-0 flex w-screen min-h-screen items-center justify-center p-4">
-          <DialogPanel className="w-full space-y-4 border bg-white p-12">
+        <div style={{
+          zIndex: "50",
+          overflowY: "auto",
+        }} className="fixed inset-0 flex w-screen min-h-screen items-center justify-center p-4">
+          <DialogPanel style={{
+            animation: "slideInFromBottom 0.7s ease-out forwards",
+          }} className="w-full space-y-4 border bg-white p-8 max-w-screen-lg mx-auto rounded-lg overflow-hidden">
             <DialogTitle className="text-lg font-medium leading-6 text-dark_black">Certificate</DialogTitle>
-            <iframe
-                title="PDF Viewer"
-                src="/PHcertificate.pdf"
-                width="100%"
-                height="400px"
-              />
+            <iframe className="w-full min-h-[70vh]"
+              title="PDF Viewer"
+              src="/PHcertificate.pdf"
+            />
             <div className="flex gap-4">
               <div onClick={() => setIsOpen(false)} className="inline-block">
                 <Button
@@ -62,6 +65,16 @@ function Courses() {
           </DialogPanel>
         </div>
       </Dialog>
+      <style jsx global>{`
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+`}</style>
     </>
   );
 }

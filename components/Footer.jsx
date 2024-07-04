@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import logo from "./../public/logoPrimary.png";
 import Image from "next/image";
@@ -8,22 +9,77 @@ import { FaXTwitter } from "react-icons/fa6";
 import ShowReel from "./ShowReel";
 
 function Footer() {
+  const navLinkStyle = {
+    position: 'relative',
+    display: 'inline-block',
+    color: '#F96302',
+    textDecoration: 'none',
+    padding: '5px 0',
+  };
+
+  const navLinkAfterStyle = {
+    content: '""',
+    position: 'absolute',
+    width: '0',
+    height: '2px',
+    display: 'block',
+    marginTop: '5px',
+    left: '0',
+    background: '#F96302',
+    transition: 'width 0.4s ease, right 0.4s ease',
+  };
+
   const navLinks = (
     <>
       <li>
-        <Link href="/">Home</Link>
+        <Link href="/" style={navLinkStyle} onMouseOver={(e) => {
+          e.currentTarget.children[0].style.width = '100%';
+        }} onMouseOut={(e) => {
+          e.currentTarget.children[0].style.width = '0';
+        }}>
+          Home
+          <span style={navLinkAfterStyle}></span>
+        </Link>
       </li>
       <li>
-        <Link href="/projects">Projects</Link>
+        <Link href="/projects" style={navLinkStyle} onMouseOver={(e) => {
+          e.currentTarget.children[0].style.width = '100%';
+        }} onMouseOut={(e) => {
+          e.currentTarget.children[0].style.width = '0';
+        }}>
+          Projects
+          <span style={navLinkAfterStyle}></span>
+        </Link>
       </li>
       <li>
-        <Link href="/about">About</Link>
+        <Link href="/about" style={navLinkStyle} onMouseOver={(e) => {
+          e.currentTarget.children[0].style.width = '100%';
+        }} onMouseOut={(e) => {
+          e.currentTarget.children[0].style.width = '0';
+        }}>
+          About
+          <span style={navLinkAfterStyle}></span>
+        </Link>
       </li>
       <li>
-        <Link href="/contact">Contact</Link>
+        <Link href="/contact" style={navLinkStyle} onMouseOver={(e) => {
+          e.currentTarget.children[0].style.width = '100%';
+        }} onMouseOut={(e) => {
+          e.currentTarget.children[0].style.width = '0';
+        }}>
+          Contact
+          <span style={navLinkAfterStyle}></span>
+        </Link>
       </li>
       <li>
-        <Link href="/blogs">Blogs</Link>
+        <Link href="/blogs" style={navLinkStyle} onMouseOver={(e) => {
+          e.currentTarget.children[0].style.width = '100%';
+        }} onMouseOut={(e) => {
+          e.currentTarget.children[0].style.width = '0';
+        }}>
+          Blogs
+          <span style={navLinkAfterStyle}></span>
+        </Link>
       </li>
     </>
   );
