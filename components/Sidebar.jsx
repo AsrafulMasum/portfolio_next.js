@@ -2,7 +2,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-function Sidebar({ open, setOpen }) {
+function Sidebar({ setOpen }) {
   const pathName = usePathname();
 
   const navLinks = (

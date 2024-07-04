@@ -7,14 +7,16 @@ import { IoIosClose, IoIosMenu } from "react-icons/io";
 import { FaFacebook, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Sidebar from "./Sidebar";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathName = usePathname();
+  console.log(pathName)
 
   const navLinkStyle = {
     position: 'relative',
     display: 'inline-block',
-    color: 'white',
     textDecoration: 'none',
     padding: '5px 0',
   };
@@ -33,7 +35,8 @@ function Navbar() {
 
   const navLinks = (
     <>
-      <li>
+      <li className={`${pathName === "/" ? "text-primary font-semibold" : "text-white"
+          }`} >
         <Link href="/" style={navLinkStyle} onMouseOver={(e) => {
           e.currentTarget.children[0].style.width = '100%';
         }} onMouseOut={(e) => {
@@ -43,7 +46,8 @@ function Navbar() {
           <span style={navLinkAfterStyle}></span>
         </Link>
       </li>
-      <li>
+      <li className={`${pathName === "/projects" ? "text-primary font-semibold" : "text-white"
+          }`}>
         <Link href="/projects" style={navLinkStyle} onMouseOver={(e) => {
           e.currentTarget.children[0].style.width = '100%';
         }} onMouseOut={(e) => {
@@ -53,7 +57,8 @@ function Navbar() {
           <span style={navLinkAfterStyle}></span>
         </Link>
       </li>
-      <li>
+      <li className={`${pathName === "/about" ? "text-primary font-semibold" : "text-white"
+          }`}>
         <Link href="/about" style={navLinkStyle} onMouseOver={(e) => {
           e.currentTarget.children[0].style.width = '100%';
         }} onMouseOut={(e) => {
@@ -63,7 +68,8 @@ function Navbar() {
           <span style={navLinkAfterStyle}></span>
         </Link>
       </li>
-      <li>
+      <li className={`${pathName === "/contact" ? "text-primary font-semibold" : "text-white"
+          }`}>
         <Link href="/contact" style={navLinkStyle} onMouseOver={(e) => {
           e.currentTarget.children[0].style.width = '100%';
         }} onMouseOut={(e) => {
@@ -73,7 +79,8 @@ function Navbar() {
           <span style={navLinkAfterStyle}></span>
         </Link>
       </li>
-      <li>
+      <li className={`${pathName === "/blogs" ? "text-primary font-semibold" : "text-white"
+          }`}>
         <Link href="/blogs" style={navLinkStyle} onMouseOver={(e) => {
           e.currentTarget.children[0].style.width = '100%';
         }} onMouseOut={(e) => {
@@ -151,7 +158,7 @@ function Navbar() {
         <div onClick={() => setOpen((prev) => !prev)} className="flex justify-end mb-4 mr-4">
           <IoIosClose className="text-3xl cursor-pointer" />
         </div>
-        <Sidebar setOpen={setOpen} open={open} />
+        <Sidebar setOpen={setOpen} />
       </aside>
     </div>
   );
