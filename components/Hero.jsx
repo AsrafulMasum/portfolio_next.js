@@ -40,7 +40,8 @@ function Hero() {
   return (
     <div className="lg:h-screen bg-primary py-20 text-white">
       <div className="h-full max-w-screen-xl mx-4 md:mx-10 xl:mx-auto flex flex-col-reverse lg:flex-row justify-between items-center gap-16 lg:gap-0">
-        <motion.div variants={textVariants}
+        <motion.div
+          variants={textVariants}
           initial="initial"
           whileInView="animate"
           className="h-full lg:w-1/2 flex flex-col justify-center gap-10"

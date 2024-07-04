@@ -1,12 +1,52 @@
+'use client'
 import React from 'react'
 import ServiceCard from './ServiceCard'
+import { motion } from "framer-motion";
+
+const leftVariants = {
+  initial: {
+    x: -200,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const rightVariants = {
+  initial: {
+    x: 200,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 function Services() {
   return (
     <div className='bg-white'>
       <div className='py-28 text-center'>
-        <h4 className='text-text_color text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-semibold capitalize'>i can provide you</h4>
-        <h2 className='text-primary text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-bold italic capitalize mt-4'>the best solutions.</h2>
+        <motion.h4 
+        variants={leftVariants}
+        initial="initial"
+        whileInView="animate"
+        className='text-text_color text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-semibold capitalize'>i can provide you</motion.h4>
+        <motion.h2 
+        variants={rightVariants}
+        initial="initial"
+        whileInView="animate"
+        className='text-primary text-4xl md:text-6xl lg:text-8xl xl:text-9xl font-bold italic capitalize mt-4'>the best solutions.</motion.h2>
       </div>
       <div className=''>
         <div className='flex flex-col lg:flex-row lg:flex-wrap justify-center'>
