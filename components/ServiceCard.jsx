@@ -38,7 +38,7 @@ function ServiceCard({ text, desc }) {
           {text}
         </h2>
         <p className={`text-dark_black leading-[140%] mb-20 duration-700 ${
-            isHovered ? "text-card_bg" : "text-dark_black"
+            isHovered ? "text-white" : "text-dark_black"
           }`}>{desc}</p>
         <Link href="/projects" className="inline-block">
           <Button
