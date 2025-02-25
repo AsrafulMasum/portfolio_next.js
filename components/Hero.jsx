@@ -69,7 +69,7 @@ function Hero() {
             <Link href="/contact">
               <Button
                 text="Contact Me"
-                styles="bg-transparent text-primary border border-primary"
+                styles="bg-transparent text-white border border-white"
                 spanStyle="bg-primary text-white"
               />
             </Link>
