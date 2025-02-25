@@ -95,7 +95,7 @@ function Navbar() {
 
   return (
     <div className="relative text-white z-50">
-      <div className="fixed w-full bg-dark_black py-4">
+      <div className="fixed w-full bg-btn_color py-4">
         <nav className="max-w-screen-xl mx-4 md:mx-10 xl:mx-auto flex justify-between items-center">
           <div className="flex justify-center items-center gap-8">
             <Link href='/' className="inline-block">

@@ -12,7 +12,7 @@ function Footer() {
   const navLinkStyle = {
     position: 'relative',
     display: 'inline-block',
-    color: '#F96302',
+    color: '#FB7D2B',
     textDecoration: 'none',
     padding: '5px 0',
   };
@@ -25,7 +25,7 @@ function Footer() {
     display: 'block',
     marginTop: '5px',
     left: '0',
-    background: '#F96302',
+    background: '#FB7D2B',
     transition: 'width 0.4s ease, right 0.4s ease',
   };
 
