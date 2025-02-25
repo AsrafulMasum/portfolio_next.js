@@ -15,6 +15,11 @@ function ContactForm() {
   const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID || "";
   const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY || "";
 
+  // Debugging logs
+  console.log("Service ID:", process.env.NEXT_PUBLIC_SERVICE_ID);
+  console.log("Template ID:", process.env.NEXT_PUBLIC_TEMPLATE_ID);
+  console.log("Public Key:", process.env.NEXT_PUBLIC_PUBLIC_KEY);  
+
   // Refs and state
   const formRef = useRef();
   const [error, setError] = useState(false);
